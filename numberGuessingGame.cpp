@@ -27,26 +27,28 @@ int main() {
 
     // Process & Output
         try {
-        number = std::stoi(numberAsString);
-        decimal = std::stof(numberAsString);
-        if (number != decimal) {
-            std::cout << decimal << " is not an integer. Try again."
-            << std::endl;
-            std::cout << std::endl;
-        } else if (number < 0) {
-            std::cout << number << " is not positive. Try again." << std::endl;
-            std::cout << std::endl;
-        } else if (number > 9) {
-            std::cout << number << " is out of range. Try again." << std::endl;
-            std::cout << std::endl;
-        } else if (number == someRandomNumber) {
-            std::cout << "You guessed right!" << std::endl;
-            break;
-        } else {
-            std::cout << "You guessed wrong. The right answer was "
-            << someRandomNumber << ". Try again." << std::endl;
-            std::cout << std::endl;
-        }
+            number = std::stoi(numberAsString);
+            decimal = std::stof(numberAsString);
+            if (number != decimal) {
+                std::cout << decimal << " is not an integer. Try again."
+                << std::endl;
+                std::cout << std::endl;
+            } else if (number < 0) {
+                std::cout << number
+                << " is not positive. Try again." << std::endl;
+                std::cout << std::endl;
+            } else if (number > 9) {
+                std::cout << number
+                << " is out of range. Try again." << std::endl;
+                std::cout << std::endl;
+            } else if (number == someRandomNumber) {
+                std::cout << "You guessed right!" << std::endl;
+                break;
+            } else {
+                std::cout << "You guessed wrong. The right answer was "
+                << someRandomNumber << ". Try again." << std::endl;
+                std::cout << std::endl;
+            }
         } catch (std::invalid_argument) {
             std::cout << numberAsString << " is not a number. Try again."
             << std::endl;
